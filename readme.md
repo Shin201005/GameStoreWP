@@ -70,14 +70,156 @@ Hệ thống được xây dựng bằng WordPress kết hợp plugin và custom
 
 ## Hướng dẫn cài đặt
 
-### Yêu cầu
-- XAMPP
-- PHP 8+
-- MySQL
-- WordPress
+### Bước 2: Copy source vào XAMPP
 
-### Các bước cài đặt
+Copy project vào thư mục:
 
-1. Clone project:
-```bash
-git clone https://github.com/your-repo/GameStoreGBA.git
+```text
+xampp/htdocs/
+```
+
+Ví dụ:
+
+```text
+xampp/htdocs/GameStoreGBA
+```
+
+---
+
+### Bước 3: Cài WordPress
+
+1. Mở XAMPP  
+2. Start Apache và MySQL  
+
+Truy cập:
+
+```text
+http://localhost/phpmyadmin
+```
+
+Tạo database mới:
+
+```text
+gamestoregba
+```
+
+Truy cập:
+
+```text
+http://localhost/GameStoreGBA
+```
+
+Tiến hành cài đặt WordPress.
+
+---
+
+### Bước 4: Thêm Theme vào WordPress
+
+Copy thư mục:
+
+```text
+gamestore-theme
+```
+
+vào:
+
+```text
+wp-content/themes/
+```
+
+Sau đó:
+
+- Vào WordPress Admin
+- Chọn:
+
+```text
+Appearance -> Themes
+```
+
+- Activate theme:
+
+```text
+gamestore-theme
+```
+
+---
+
+### Bước 5: Thêm Plugin vào WordPress
+
+Copy thư mục:
+
+```text
+gamestore-core
+```
+
+vào:
+
+```text
+wp-content/plugins/
+```
+
+Sau đó:
+
+- Vào WordPress Admin
+- Chọn:
+
+```text
+Plugins
+```
+
+- Activate plugin:
+
+```text
+gamestore-core
+```
+
+---
+
+### Bước 6: Cấu hình EmulatorJS
+
+Tải emulator máy ảo trong đường dẫn( tải bản 4.2.3.7z nếu có bản mới hơn thì chọn bản mới nhất) : https://github.com/EmulatorJS/EmulatorJS/releases
+
+Copy thư mục EmulatorJS vào project.
+
+Ví dụ:
+
+```text
+GameStoreGBA/emulatorjs/
+```
+
+Đảm bảo:
+
+- Có file `loader.js`
+- Có thư mục `data`
+- Có thư mục ROM game
+
+---
+
+## Hướng dẫn chạy project
+
+1. Mở XAMPP  
+2. Start Apache  
+3. Start MySQL  
+
+Truy cập website:
+
+```text
+http://localhost/GameStoreGBA
+```
+
+Trang quản trị:
+
+```text
+http://localhost/GameStoreGBA/wp-admin
+```
+
+---
+
+## Tài khoản demo
+
+### Admin
+- Username: admin
+- Password: 123456
+
+
+---
